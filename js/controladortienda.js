@@ -1,21 +1,22 @@
-//controlando etiquetas 
+//tienda 
+let productosnombre = ["camiseta","figura de accion"]
+let productosprecio = [70000,150000]
+let productospromocion = [true,false]
 
-//1.crear una variable 
-let etiquetatitulo = document.getElementById("title");
-console.log(etiquetatitulo);
-let etiquetamenu = document.getElementById("menu");
-console.log(etiquetamenu);
+console.log(productosnombre[2]);
+console.log(productosnombre);
+// cuando hay datos dentro de llaves son objetos
 
-//2. como modificar el texto de una etiqueta
-etiquetatitulo.textContent="Antiheroe"
-etiquetatitulo.textContent="Deadpool"
+//creando objetos con js
+let usuario={
+    
+    nombre:"bruno diaz",
+    edad:48,
+    amigos:["gatubela","mr frio","pinguino"]
 
+}
 
-//controlando una imagen 
-let etiquetafoto = document.getElementById("imagen");
-etiquetafoto.src="img/3.jpg"
-
-
-//utilizar o cambiar el estilo de la etiqueta
-etiquetatitulo.classList.add("text-center")
-etiquetatitulo.classList.add("text-danger")
+console.log(usuario)
+console.log(usuario.nombre)
+console.log(usuario.amigos)
+console.log(usuario.amigos[1])
