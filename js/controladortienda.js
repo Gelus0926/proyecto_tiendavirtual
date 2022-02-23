@@ -8,7 +8,7 @@ console.log(etiquetamenu);
 
 //2. como modificar el texto de una etiqueta
 etiquetatitulo.textContent="Antiheroe"
-etiquetamenu.textContent="Deadpool"
+etiquetatitulo.textContent="Deadpool"
 
 
 //controlando una imagen 
