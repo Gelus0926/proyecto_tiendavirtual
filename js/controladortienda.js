@@ -1,30 +1,21 @@
-//ENTRADAS DEL PROBLEMA (comentario de linea)
+//controlando etiquetas 
 
-/* 
-    COMENTARIO DE BLOQUE
-*/
+//1.crear una variable 
+let etiquetatitulo = document.getElementById("title");
+console.log(etiquetatitulo);
+let etiquetamenu = document.getElementById("menu");
+console.log(etiquetamenu);
 
-//entradas==variables==constantes 
+//2. como modificar el texto de una etiqueta
+etiquetatitulo.textContent="Antiheroe"
+etiquetamenu.textContent="Deadpool"
 
-let nombreproducto='deadpool camisa'
-let precioproducto=600000
-let pesoproducto=18.5
-let tienedescuento=true
-let descriptionproducto='camisa de deadpool'
-let telefonovendedor='321576849'
 
-const NOMBRE_CLIENTE='Mateo'
+//controlando una imagen 
+let etiquetafoto = document.getElementById("imagen");
+etiquetafoto.src="img/3.jpg"
 
-//Arreglos unidimensionales (vectores)
-//Sirven para almacenar varios elementos en 1 sola variable
-let productos=["camisa","figura","vaso","gorra"]
-let productos2=Array("camisa","figura","vaso","gorra")
-console.log("************")
-console.log(productos)
-console.log(productos2[0,1,2,3])
 
-//SALIDAS
-console.log("tardes buenas")
-console.log(nombreproducto)
-console.log("el nombre del producto es: " + nombreproducto+" y su precio es de: " + precioproducto)
-console.log(`su nombre es: ${NOMBRE_CLIENTE} y su producto es ${nombreproducto}`)
+//utilizar o cambiar el estilo de la etiqueta
+etiquetatitulo.classList.add("text-center")
+etiquetatitulo.classList.add("text-danger")
