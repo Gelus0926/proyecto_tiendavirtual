@@ -1,0 +1,22 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+.icon{
+    width: 50px;
+}
+
+.titulos{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.recomendaciones{
+    justify-content: center;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+

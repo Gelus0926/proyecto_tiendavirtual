@@ -1,15 +1,15 @@
 //creando un arreglo de objetos
 let productos = [
-    {foto :'img/p1.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Demon Slayer"},
-    {foto :'img/p2.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta jujutsu Kaisen"},
-    {foto :'img/p3.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Nanatsu No Taizai"},
-    {foto :'img/p4.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta One Piece"},   
-    {foto :'img/p5.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Boku No Hero Academia"},
-    {foto :'img/p6.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Bleach"},
-    {foto :'img/p7.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Death Note"},
-    {foto :'img/p8.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Shingeki No Kyojin"},
-    {foto :'img/p9.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fairy Tail"},
-    {foto :'img/p10.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fullmeta Alchemist"} 
+    {foto :'img/p1.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Demon Slayer", boton:"Agregar Producto"},
+    {foto :'img/p2.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta jujutsu Kaisen", boton:"Agregar Producto"},
+    {foto :'img/p3.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Nanatsu No Taizai", boton:"Agregar Producto"},
+    {foto :'img/p4.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta One Piece", boton:"Agregar Producto"},   
+    {foto :'img/p5.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Boku No Hero Academia", boton:"Agregar Producto"},
+    {foto :'img/p6.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Bleach", boton:"Agregar Producto"},
+    {foto :'img/p7.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Death Note", boton:"Agregar Producto"},
+    {foto :'img/p8.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Shingeki No Kyojin", boton:"Agregar Producto"},
+    {foto :'img/p9.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fairy Tail", boton:"Agregar Producto"},
+    {foto :'img/p10.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fullmeta Alchemist", boton:"Agregar Producto"} 
 ]
 
 console.log(productos)
@@ -49,11 +49,17 @@ console.log(productos)
     precio.classList.add("text-center")
     precio.textContent=producto.precio
 
+    //boton
+    let boton=document.createElement("button")
+    boton.classList.add("btn-center")
+    boton.textContent=producto.boton
+
 
     //3.padres e hijos
     tarjeta.appendChild(foto)
     tarjeta.appendChild(titulo)
     tarjeta.appendChild(precio)
+    tarjeta.appendChild(boton)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 

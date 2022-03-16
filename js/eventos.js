@@ -16,5 +16,6 @@ etiquetacamiartexto.addEventListener("mouseover",cambiartitulo);
 
 function cambiartitulo(){
     let etiquetacamiartexto=document.getElementById("tituloimg")
-    etiquetacamiartexto.textContent="Descripcion"
+    etiquetacamiartexto.textContent="Histotria"
 }
+
