@@ -20,9 +20,11 @@ console.log(productos)
 //1.Creo una variable para almacenar la base sobre la cual voy a pintar
     let fila=document.getElementById("fila")
     productos.forEach(function(producto){
+        /*
     console.log(producto.nombre);
     console.log(producto.precio);
     console.log(producto.foto);
+    */
 
     //2.Pintando etiquetas
     //div con la clase col
@@ -49,20 +51,49 @@ console.log(productos)
     precio.classList.add("text-center")
     precio.textContent=producto.precio
 
+    //descripcion
+    let descripcion=document.createElement("p")
+    descripcion.classList.add("text-center")
+    descripcion.textContent=producto.descripcion
+
     //boton
     let boton=document.createElement("button")
     boton.classList.add("btn-center")
+    boton.classList.add("btn","btn-warning","w-40","d-block","mx-auto","mt-4")
+    boton.setAttribute("type","button")
     boton.textContent=producto.boton
 
 
     //3.padres e hijos
-    tarjeta.appendChild(foto)
-    tarjeta.appendChild(titulo)
-    tarjeta.appendChild(precio)
-    tarjeta.appendChild(boton)
-    columna.appendChild(tarjeta)
-    fila.appendChild(columna)
+    tarjeta.appendChild(foto);
+    tarjeta.appendChild(titulo);
+    tarjeta.appendChild(precio);
+    tarjeta.appendChild(descripcion);
+    tarjeta.appendChild(boton);
+    columna.appendChild(tarjeta);
+    fila.appendChild(columna);
 
 
 
 })
+
+//rutina para ampliar informacion del producto
+let filacontenedor=document.getElementById("fila")
+filacontenedor.addEventListener("click",function(evento){
+    if(evento.target.classList.contains("btn")){
+
+        console.log(evento.target.parentElement.querySelector("h4").textContent)
+        console.log(evento.target.parentElement.querySelector("h4").src)
+
+        let fotoinfo=document.getElementById("fotoInfo")
+        fotoinfo.src=(evento.target.parentElement.querySelector("img").src)
+
+        let titulofoto=document.getElementById("tituloinfo")
+        titulofoto.textContent=evento.target.parentElement.querySelector("h4").textContent
+
+        let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+        modalinfo.show()
+
+    }
+})
+
