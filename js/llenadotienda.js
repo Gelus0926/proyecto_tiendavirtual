@@ -1,15 +1,15 @@
 //creando un arreglo de objetos
 let productos = [
-    {foto :'img/p1.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Demon Slayer", boton:"Agregar Producto"},
-    {foto :'img/p2.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta jujutsu Kaisen", boton:"Agregar Producto"},
-    {foto :'img/p3.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta Nanatsu No Taizai", boton:"Agregar Producto"},
-    {foto :'img/p4.png', nombre:"Camiseta",precio:45000,descripcion:"Camiseta One Piece", boton:"Agregar Producto"},   
-    {foto :'img/p5.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Boku No Hero Academia", boton:"Agregar Producto"},
-    {foto :'img/p6.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Bleach", boton:"Agregar Producto"},
-    {foto :'img/p7.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Death Note", boton:"Agregar Producto"},
-    {foto :'img/p8.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Shingeki No Kyojin", boton:"Agregar Producto"},
-    {foto :'img/p9.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fairy Tail", boton:"Agregar Producto"},
-    {foto :'img/p10.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Fullmeta Alchemist", boton:"Agregar Producto"} 
+    {foto :'img/p1.png', nombre:"Camiseta",precio:45000,descripcion:"Camisa Negra Demon Slayer", boton:"Agregar Producto"},
+    {foto :'img/p2.png', nombre:"Camiseta",precio:45000,descripcion:"Camisa Negra jujutsu Kaisen", boton:"Agregar Producto"},
+    {foto :'img/p3.png', nombre:"Camiseta",precio:45000,descripcion:"Camisa Negra Nanatsu No Taizai", boton:"Agregar Producto"},
+    {foto :'img/p4.png', nombre:"Camiseta",precio:45000,descripcion:"Camisa Negra One Piece", boton:"Agregar Producto"},   
+    {foto :'img/p5.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Negra Boku No Hero Academia", boton:"Agregar Producto"},
+    {foto :'img/p6.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Negra Bleach", boton:"Agregar Producto"},
+    {foto :'img/p7.png', nombre:"Chompa",precio:90000,descripcion:"Chompa Negra Death Note", boton:"Agregar Producto"},
+    {foto :'img/p8.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Negro Shingeki No Kyojin", boton:"Agregar Producto"},
+    {foto :'img/p9.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Negro Fairy Tail", boton:"Agregar Producto"},
+    {foto :'img/p10.png', nombre:"Buzo",precio:75000,descripcion:"Buzo Negro Fullmeta Alchemist", boton:"Agregar Producto"} 
 ]
 
 console.log(productos)
@@ -67,8 +67,8 @@ console.log(productos)
     //3.padres e hijos
     tarjeta.appendChild(foto);
     tarjeta.appendChild(titulo);
-    tarjeta.appendChild(precio);
     tarjeta.appendChild(descripcion);
+    tarjeta.appendChild(precio);
     tarjeta.appendChild(boton);
     columna.appendChild(tarjeta);
     fila.appendChild(columna);
@@ -93,6 +93,12 @@ filacontenedor.addEventListener("click",function(evento){
 
         let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
         modalinfo.show()
+
+        let descripcioninfo=document.getElementById("descripcionInfo")
+        descripcioninfo.textContent=(evento.target.parentElement.querySelector("p").textContent)
+
+        let precioInfo=document.getElementById("precioInfo")
+        precioInfo.textContent=(evento.target.parentElement.querySelector("h2").textContent)
 
     }
 })
