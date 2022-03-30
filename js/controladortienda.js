@@ -1,3 +1,4 @@
+/*
 //tienda 
 let productosnombre = ["camiseta","figura de accion"]
 let productosprecio = [70000,150000]
@@ -19,4 +20,4 @@ let usuario={
 console.log(usuario)
 console.log(usuario.nombre)
 console.log(usuario.amigos)
-console.log(usuario.amigos[1])
+console.log(usuario.amigos[1])*/
