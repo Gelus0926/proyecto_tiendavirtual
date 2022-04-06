@@ -4,8 +4,6 @@ import { ampliarinformacion } from "./ampliarinfo.js";
 //creo un producto vacio
 let producto={}
 
-
-
 //llamando a tienda llenado
 llenarTienda();
 

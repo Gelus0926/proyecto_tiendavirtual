@@ -1,4 +1,5 @@
 export function llenarTienda(){
+//export function llenarTienda(){
     //creando un arreglo de objetos
     let productos = [
         {foto :'img/p1.png', nombre:"Camiseta",precio:45000,descripcion:"Camisa Negra Demon Slayer", boton:"Agregar Producto"},
