@@ -19,17 +19,17 @@ filacontenedor.addEventListener("click",function(evento){
         producto=ampliarinformacion(evento)
         console.log(producto)
         modalinfo.show();
+        reiniciar();
     }
 })
 
 //añadir un prducto al carrito de compras
 let carrito=[];
 let botonagregarcarrito=document.getElementById("btnadd")
-let cantidad=document.getElementById("CantidadProducto").value;
 let capsula=document.getElementById("capsula")
 botonagregarcarrito.addEventListener("click",function(){
+    let cantidad=document.getElementById("CantidadProducto").value;
     //antes de capturar la cantidad y agregar el producto
-    
     producto.cantidad=cantidad
      //Agregar el producto al carrito
      carrito.push(producto)
@@ -43,13 +43,15 @@ botonagregarcarrito.addEventListener("click",function(){
     capsula.textContent=suma
     modalinfo.hide()
     LimpiarCarrito.classList.remove("invisible")
-
+    subtotal(1)
     modalinfo.show();
+    
 })
 
 //Rutina para limpiar
 let LimpiarCarrito = document.getElementById("limpiar")
 LimpiarCarrito.addEventListener("click",function(){
+    subtotal(0)
     capsula.textContent=0
     capsula.classList.add("invisible")
     LimpiarCarrito.classList.add("invisible")
@@ -60,9 +62,8 @@ LimpiarCarrito.addEventListener("click",function(){
 //ver carrito
 let btnvercarrito=document.getElementById("vercarrito")
 btnvercarrito.addEventListener("click",function(){
-
-    //Recorrer el carrito y pintar los productos
-    let base=document.getElementById("baseCarro")
+//Recorrer el carrito y pintar los productos
+let base=document.getElementById("baseCarro")
 
     base.innerHTML = ""
 
@@ -117,5 +118,26 @@ btnvercarrito.addEventListener("click",function(){
 
 })
 
+//Mostrar subtotal
+let mostrarSubtotal = document.getElementById("subtotal")
+
+function subtotal(validar){
+    let total=0
+    carrito.forEach(function (producto){
+       if(validar==1){
+        total=total+(Number(producto.cantidad)*Number(producto.precioInfo))
+        mostrarSubtotal.textContent=total
+        console.log(total)
+       }else{
+           total=0
+           mostrarSubtotal.textContent=""
+       }
+    })
+}
+
+function reiniciar(){
+    let CantidadProducto = document.getElementById("CantidadProducto")
+    CantidadProducto.value="1"
+}
 
 
