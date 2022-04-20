@@ -1,2 +1,22 @@
 tareas 
 1) pintar nombre, cantidad, precio, subtotal
+
+
+protocolos del servidor
+*protocolos http conjunto de normas 
+-se debe de crear un mensaje(petición)
+-Que voy hacer 
+
+si va a insertar (Post)
+si va a buscar (Get)
+si va a editar (Put)
+si va a eliminar (Delete)
+
+EndPoint, 
+
+url+EndPoint=URI
+
+*Aplicación monolitica
+
+SOAP
+<xml>
