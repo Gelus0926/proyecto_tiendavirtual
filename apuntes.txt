@@ -20,3 +20,14 @@ url+EndPoint=URI
 
 SOAP
 <xml>
+
+// Que debe de tener la tienda 
+
+tienda
+* La cantidad por defecto en 1 en el input de la cantidad de productos
+
+*Cerrar Modal info producto (Add)
+
+*cuando cierre el modal por defecto la cantidad se debe reiniciar a 1
+
+*Mostrar el total de la compra y este valor convertirlo en usd

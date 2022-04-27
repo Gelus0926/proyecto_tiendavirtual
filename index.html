@@ -35,17 +35,10 @@
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#tituloimg">Historia</a></li>
                         <li><a class="dropdown-item" href="#recomendaciones">recomendaciones</a></li>
+                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalRegistro">Registro</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="informacion.html">Sobre nosotros</a></li>
                       </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">
-                        <i class="bi bi-cart2"></i>
-                        <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
-                          99+
-                        </span>
-                      </a>
                     </li>
                   </ul>
                   <form class="d-flex">
@@ -82,6 +75,37 @@
               </div>
           </section>       
       </main>
+
+      <!-- Modal De Registro-->
+      <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <form id=formularioregistro"">
+                <div class="mb-3">
+                  <label  class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+        
+                <div class="mb-3">
+                  <label  class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100" id="btnregistro">Registar</button>
+              </form>
+        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -152,28 +176,25 @@
         </div>
       </aside>
 
-      <main>
-        <section>
-          <form>
-            <div class="mb-3">
-              <label  class="form-label">Email</label>
-              <input type="email" class="form-control" id="email">
-            </div>
+    
+      
 
-            <div class="mb-3">
-              <label  class="form-label">Password</label>
-              <input type="password" class="form-control" id="password">
+      <section>
+        <!-- Modal -->
+        <div class="modal fade" id="mensajeInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="infoModal"></p>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary w-100" id="btnregistro">Registar</button>
-          </form>
-        </section>
-      </main>
-
-      <script src="js/registro.js" type="module"></script>
-      <script src="js/firebase.js" type="module"></script>
-      <script src="js/llenadotienda.js"></script>
-      <script src="js/eventos.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+          </div>
+        </div>
+      </section>
 
       <br>
       <footer class="text-muted py-5 bg-dark">
@@ -197,5 +218,10 @@
           </footer>
         </div>
       </footer>
+      <script src="js/registro.js" type="module"></script>
+      <script src="js/firebase.js" type="module"></script>
+     
+      <script src="js/eventos.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
