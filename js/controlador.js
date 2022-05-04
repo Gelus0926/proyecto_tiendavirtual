@@ -34,13 +34,13 @@ botonagregarcarrito.addEventListener("click",function(){
     producto.subtotal=producto.cantidad*Number(producto.precioInfo)
      //Agregar el producto al carrito
      carrito.push(producto)
-     console.log(carrito)
+     console.log(cantidad)
     //pintar la capsula en el carrito
     let suma=0
     carrito.forEach(function (producto){
         suma=suma+Number(producto.cantidad)
     })
-    console.log(suma)
+    //console.log(suma)
     capsula.classList.remove("invisible")
     capsula.textContent=suma
     modalinfo.hide()
@@ -124,10 +124,12 @@ let base=document.getElementById("baseCarro")
 
 })
 
-//Mostrar subtotal
+//Mostrar total
 let mostrarTotal = document.getElementById("totalCompra")
-let total=0
+let total
+
 function Total(validar){
+    total=0;
     carrito.forEach(function (producto){
        if(validar==1){
            total=total+producto.subtotal
@@ -150,5 +152,3 @@ convertidor.addEventListener("click",function(){
     let dolares = pesos/3955
     mostrarTotal.textContent="Dolar: "+dolares.toFixed(2)
 })
-
-
